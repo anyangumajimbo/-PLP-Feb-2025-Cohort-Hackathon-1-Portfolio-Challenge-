@@ -31,18 +31,30 @@
         <!-- Hero Text  -->
       <h1 style="font-size:50px">I am <br> Majimbo Anyangu</h1>
       <p>And I'm a Tech-Savvy</p>
-      <div class="cv-links">
-        <a href="path/to/your-cv.pdf" target="_blank" class="cv-btn view-cv">
-            <i class="far fa-eye"></i> View CV
-        </a>
-        <a href="path/to/your-cv.pdf" download class="cv-btn download-cv">
-            <i class="fas fa-download"></i> Download CV
-        </a>
+
+                      
+    <!-- Programming Languages Ticker -->
+    <div class="languages-container">
+        <section id="skills">
+        <span class="languages-label">I am prof following pr:</span>
+        <div class="languages-ticker">
+            <span class="language-item">HTML</span>
+            <span class="language-item">CSS</span>
+            <span class="language-item">JavaScript</span>
+
+            <span class="language-item">Python</span>
+            <span class="language-item">C</span>
+            <span class="language-item">MQTT</span>
+            <!-- Duplicate items for seamless looping -->
+            <span class="language-item">HTML</span>
+            <span class="language-item">CSS</span>
+            <span class="language-item">JavaScript</span>
+        </div>
     </div>
   </div>
   </div>
   </div>
-        
+</section>
         
     <!-- Header -->
     <header id="header">
@@ -50,6 +62,21 @@
         <div class="logo">
             <!-- Logo Image -->
             <img src="logo.png" alt="My Logo" style="height: 50px;">
+        </div>
+
+        <!-- CV Dropdown in Header -->
+        <div class="cv-dropdown">
+            <div class="header-cv-btn">
+                <i class="fas fa-file-alt"></i> MY CV
+            </div>
+            <div class="cv-dropdown-content">
+                <a href="path/to/your-cv.pdf" target="_blank">
+                    <i class="far fa-eye"></i> View CV
+                </a>
+                <a href="path/to/your-cv.pdf" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
         </div>
 
         <!-- Hamburger Menu for Small Screens -->
@@ -61,6 +88,7 @@
         <nav>
             <ul class="nav-links">
                 <!-- Navigation Links -->
+                <li class="nav-languages"><a href="#skills">Programming Languages</a></li>
                 <li><a href="#about" class="nav-about">About</a></li>
                 <li><a href="#education" class="nav-education">Education</a></li>
                 <li><a href="#interests" class="nav-interests">Interests</a></li>
@@ -214,28 +242,49 @@
                 <p>Penetration testing, threat analysis, and securing systems.</p>
             </div>
         </div>
-    </div>
 </section>
 
-        <div class="column">
-            <img src="https://via.placeholder.com/300" alt="Game Development">
-            <p>Game Development: Using Unity and Unreal Engine, I create immersive gaming experiences.</p>
-        </div>
-        <div class="column">
-            <img src="https://via.placeholder.com/300" alt="Cybersecurity">
-            <p>Cybersecurity: I specialize in penetration testing, threat analysis, and digital security.</p>
-        </div>
-        <div class="column">
-            <img src="https://via.placeholder.com/300" alt="Data Analysis">
-            <p>Data Analysis: I transform raw data into meaningful insights using Python and R.</p>
-        </div>
-        <div class="column">
-            <img src="https://via.placeholder.com/300" alt="Artificial Intelligence">
-            <p>Artificial Intelligence: I develop AI models and natural language processing applications for various industries.</p>
-        </div>
-    </div>
-</div>
+<!-- Projects Section -->
+<div class="container">
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <!-- 3D Image Carousel -->
+            <div class="project-item">
+                <div class="project-text">
+                    <h3>3D Image Carousel Animation</h3>
+                    <p>The 3D Image Carousel Animation is a visually engaging project that showcases a rotating 3D image gallery using only HTML and CSS. It utilizes <strong>CSS transformations, perspective, and animations</strong> to create a dynamic effect, enhanced by reflections. The project highlights pure CSS capabilities for creating interactive, JavaScript-free web components.</p>
+                </div>
+                <div class="project-image">
+                    <img src="carousel-demo.webp" alt="3D Image Carousel Animation">
+                </div>
+            </div>
 
+            <!-- Home Automation -->
+            <div class="project-item">
+                <div class="project-text">
+                    <h3>Home Automation Using Bluetooth</h3>
+                    <p>The Home Automation Using Bluetooth project enables remote control of household appliances via a <strong>Bluetooth-enabled microcontroller</strong>. It uses an <strong>Android app</strong> to send control signals, processed by the microcontroller to switch devices on/off. Implemented using <strong>C++ (Arduino) for embedded programming</strong>, it integrates <strong>real-time communication protocols</strong> for seamless and responsive automation.</p>
+                </div>
+                <div class="project-image">
+                    <img src="home-automation.webp" alt="Home Automation System">
+                </div>
+            </div>
+
+            <!-- Robotic Hand -->
+            <div class="project-item">
+                <div class="project-text">
+                    <h3>Soft-Active Robotic Hand</h3>
+                    <p>The Soft-Active Robotic Hand utilizes <strong>Nitinol shape-memory alloy (SMA) actuators</strong> for flexible and responsive motion. The system is <strong>microcontroller-driven</strong>, with <strong>Arduino (C++) programming</strong> controlling actuation. Sensors provide <strong>real-time feedback</strong>, enabling adaptive grasping. The <strong>Finite Element Method (FEM)</strong> is used for structural analysis, ensuring optimized force distribution. The design integrates <strong>embedded control algorithms</strong> for smooth, precise movements.</p>
+                </div>
+                <div class="project-image">
+                    <img src="robotic-hand.webp" alt="Soft-Active Robotic Hand">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 <!-- Contact form section -->
 <section id="contact">
     <div class="contact-container">
