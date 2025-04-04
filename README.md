@@ -58,7 +58,7 @@ Feel free to reach out to me through the following channels:
 - **Email**: [majimboanyangu@gmail.com](mailto:majimboanyangu@gmail.com)
 - **Phone**: [+254 7469 541 20](tel:+254746954120)
 - **LinkedIn**: [linkedin.com/in/anyangu-majimbo-b30018235](https://www.linkedin.com/in/anyangu-majimbo-b30018235/)
-- **Twitter**: [@yourprofile](https://twitter.com/yourprofile)
+- **Twitter**: [@Attenti44476913](https://x.com/Attenti44476913)
 - **Facebook**: [facebook.com/yourprofile](https://facebook.com/yourprofile)
 
 Alternatively, use the contact form on the website to send me a message directly.
@@ -68,4 +68,4 @@ Alternatively, use the contact form on the website to send me a message directly
 ## 📁 How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone https://github.com/anyangumajimbo/-PLP-Feb-2025-Cohort-Hackathon-1-Portfolio-Challenge-.git
