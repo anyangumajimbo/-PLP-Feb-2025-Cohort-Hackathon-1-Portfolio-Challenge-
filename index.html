@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Added to solve horizontal scrolling issue */ -->
+    <meta name="description" content="A portfolio website showcasing my skills, projects, and achievements.">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
@@ -23,20 +25,21 @@
      <link rel="stylesheet" href="style.css"> 
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+<!-- This is where the body starts -->
 <body>
    <!-- Hero Section -->
    <div class="hero-image">
     <div class="hero-content">
     <div class="hero-text">
         <!-- Hero Text  -->
-      <h1 style="font-size:50px">I am <br> Majimbo Anyangu</h1>
+      <h1>I am <br> Majimbo Anyangu</h1>
       <p>And I'm a Tech-Savvy</p>
 
                       
     <!-- Programming Languages Ticker -->
     <div class="languages-container">
-        <section id="skills">
-        <span class="languages-label">I am prof following pr:</span>
+        <h2>Programming Skills</h2>
+        <span class="languages-label">I am proficient in:</span>
         <div class="languages-ticker">
             <span class="language-item">HTML</span>
             <span class="language-item">CSS</span>
@@ -54,7 +57,7 @@
   </div>
   </div>
   </div>
-</section>
+
         
     <!-- Header -->
     <header id="header">
@@ -70,34 +73,14 @@
                 <i class="fas fa-file-alt"></i> MY CV
             </div>
             <div class="cv-dropdown-content">
-                <a href="path/to/your-cv.pdf" target="_blank">
+                <a href="MAJIMBOCV.pdf" target="_blank">
                     <i class="far fa-eye"></i> View CV
                 </a>
-                <a href="path/to/your-cv.pdf" download>
+                <a href="MAJIMBOCV.pdf" download>
                     <i class="fas fa-download"></i> Download CV
                 </a>
             </div>
         </div>
-
-        <!-- Hamburger Menu for Small Screens -->
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-    </div>
-    
-        <!-- Navigation Section -->
-        <nav>
-            <ul class="nav-links">
-                <!-- Navigation Links -->
-                <li class="nav-languages"><a href="#skills">Programming Languages</a></li>
-                <li><a href="#about" class="nav-about">About</a></li>
-                <li><a href="#education" class="nav-education">Education</a></li>
-                <li><a href="#interests" class="nav-interests">Interests</a></li>
-                <li><a href="#faqs" class="nav-faqs">FAQs</a></li>
-                <li><a href="#services" class="nav-services">Services</a></li>
-                <li><a href="#projects" class="nav-projects">Projects</a></li>
-                <li><a href="#contact" class="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
     
         <!-- Social Media Section -->
         <div class="social-media">
@@ -117,33 +100,48 @@
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
-    </header>
+        <!-- Hamburger Menu -->
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+    <label for="hamburger-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Navigation Section -->
+    <nav class="dropdown-nav">
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-about">About</a></li>
+            <li><a href="#education" class="nav-education">Education</a></li>
+            <li><a href="#interests" class="nav-interests">Interests</a></li>
+            <li><a href="#projects" class="nav-projects">Projects</a></li>
+            <li><a href="#contact" class="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
 </div>
+    </header>
 
-<div class="container">
-    <!-- About Me Section -->
-<section id="about">
-    <div class="row">
-        <div class="side-column"></div> <!-- First 20px column for spacing -->
-        
-        <!-- Main content columns -->
-         <!-- The left part of the main content contains my image, and the right part my a brief text about me -->
-        <div class="column">
-            <img src="Majimbo.png" alt="Majimbo Anyangu" class="profile-image">
-        </div>
-<!-- Second Large Column (Text) -->
-        <div class="column">
-            
-            <p>I am Majimbo Anyangu, a detail-oriented professional with a unique blend of expertise in AI data annotation, multilingual transcription, and software engineering. Currently pursuing software engineering at PLP Academy, I am deeply passionate about coding, system design, and building scalable solutions. Fluent in English, French, and Swahili, I bring over two years of experience in training AI models, refining datasets, and ensuring high-quality outputs for machine learning applications. My work spans diverse industries, where I’ve optimized annotation workflows, improved model accuracy by up to 20%, and delivered error-free multilingual transcriptions with a 98% client satisfaction rate.</p>
-            <p>Passionate about the intersection of technology and language, I excel at analyzing queries, identifying linguistic nuances, and enhancing AI performance through meticulous data review. I thrive in remote collaboration, adhere strictly to project guidelines, and consistently meet tight deadlines while maintaining a focus on quality and efficiency.</p>
-            <p>Beyond AI, I hold a degree in Electrical and Electronics Engineering and am now expanding my skills in software development. This multidisciplinary background—spanning hardware, AI, and now software engineering—allows me to approach problems with a versatile, analytical, and innovative mindset.</p>
-            <p>Whether it’s developing software, training AI models, or transcribing multilingual content, I am committed to leveraging cutting-edge technology to drive innovation and deliver impactful, user-centric solutions.</p>
-        </div>
-
-        <!-- Side column for spacing -->
-        <div class="side-column"></div>
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <!-- This grid will hold the profile image and description -->
+                <!-- Profile Image and Description -->
+                <div class="about-item">
+                    <div class="about-image">
+                        <img src="Majimbo.png" alt="Majimbo Anyangu" class="profile-image">
+                    </div>
+                    <div class="about">
+                        <p>My name is Majimbo Anyangu. I hold a degree in Electrical Engineering from the Technical University of Kenya (TUK) and am currently advancing my expertise as a Software Engineering student at PLP Academy.</p>
+                        <p>My unique combination of hardware knowledge and software development skills positions me at the intersection of emerging technologies. I specialize in AI applications, focusing on dataset optimization and multilingual systems.</p>
+                        <p>Passionate about the AI revolution, I develop scalable, intelligent solutions to real-world problems. My technical background enables me to bridge engineering disciplines effectively.</p>
+                        <p>I am committed to leveraging cutting-edge technology to drive innovation, with a focus on building practical, high-impact AI systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
     
     <!-- The education section -->
     <div class="container">
@@ -190,7 +188,7 @@
         </section>
     </div>
     
-
+    <div class="container">
   <!-- Interests Section -->
 <section id="interests">  <!-- Fixed ID to match CSS -->
     <h2>Technical Interests</h2>
@@ -243,7 +241,7 @@
             </div>
         </div>
 </section>
-
+    
 <!-- Projects Section -->
 <div class="container">
     <!-- Projects Section -->
@@ -257,7 +255,7 @@
                     <p>The 3D Image Carousel Animation is a visually engaging project that showcases a rotating 3D image gallery using only HTML and CSS. It utilizes <strong>CSS transformations, perspective, and animations</strong> to create a dynamic effect, enhanced by reflections. The project highlights pure CSS capabilities for creating interactive, JavaScript-free web components.</p>
                 </div>
                 <div class="project-image">
-                    <img src="carousel-demo.webp" alt="3D Image Carousel Animation">
+                    <img src="3D.png" alt="3D Image Carousel Animation">
                 </div>
             </div>
 
@@ -268,7 +266,7 @@
                     <p>The Home Automation Using Bluetooth project enables remote control of household appliances via a <strong>Bluetooth-enabled microcontroller</strong>. It uses an <strong>Android app</strong> to send control signals, processed by the microcontroller to switch devices on/off. Implemented using <strong>C++ (Arduino) for embedded programming</strong>, it integrates <strong>real-time communication protocols</strong> for seamless and responsive automation.</p>
                 </div>
                 <div class="project-image">
-                    <img src="home-automation.webp" alt="Home Automation System">
+                    <img src="HomeAutomation.jpg" alt="Home Automation System">
                 </div>
             </div>
 
@@ -279,7 +277,7 @@
                     <p>The Soft-Active Robotic Hand utilizes <strong>Nitinol shape-memory alloy (SMA) actuators</strong> for flexible and responsive motion. The system is <strong>microcontroller-driven</strong>, with <strong>Arduino (C++) programming</strong> controlling actuation. Sensors provide <strong>real-time feedback</strong>, enabling adaptive grasping. The <strong>Finite Element Method (FEM)</strong> is used for structural analysis, ensuring optimized force distribution. The design integrates <strong>embedded control algorithms</strong> for smooth, precise movements.</p>
                 </div>
                 <div class="project-image">
-                    <img src="robotic-hand.webp" alt="Soft-Active Robotic Hand">
+                    <img src="ROBOTCSI.jpg" alt="Soft-Active Robotic Hand">
                 </div>
             </div>
         </div>
@@ -319,21 +317,64 @@
             </form>
         </div>
 
-        <div class="contact-details">
-            <h3>Alternatively, you can reach me through:</h3>
-            <ul>
-                <li><i class="fas fa-envelope"></i> Email: <a href="mailto:example@example.com">majimboanyangu@gmail.com</a></li>
-                <li><i class="fas fa-phone-alt"></i> Phone: <a href="tel:+1234567890">+254 7469 541 20</a></li>
-                <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/anyangu-majimbo-b30018235/" target="_blank">linkedin.com/in/yourprofile</a></li>
-                <li><i class="fab fa-twitter"></i> Twitter: <a href="https://twitter.com/yourprofile" target="_blank">@yourprofile</a></li>
-                <li><i class="fab fa-facebook"></i> Facebook: <a href="https://facebook.com/yourprofile" target="_blank">facebook.com/yourprofile</a></li>
+        
+    </div>
+</section>
+</div>
+</div>
+
+
+ <!-- Footer Section -->
+ <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Majimbo Anyangu</h3>
+            <p>A passionate tech-savvy professional with expertise in AI, software engineering, and multilingual transcription. Dedicated to building innovative solutions that bridge technology and human needs.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#about"><i class="fas fa-chevron-right"></i> About Me</a></li>
+                <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
+                <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
+                <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Technical Skills</h3>
+            <ul class="footer-links">
+                <li><a href="#"><i class="fas fa-code"></i> HTML/CSS/JavaScript</a></li>
+                <li><a href="#"><i class="fas fa-robot"></i> AI & Machine Learning</a></li>
+                <li><a href="#"><i class="fas fa-microchip"></i> Embedded Systems</a></li>
+                <li><a href="#"><i class="fas fa-database"></i> Data Analysis</a></li>
+                <li><a href="#"><i class="fas fa-shield-alt"></i> Cybersecurity</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+                <li><a href="mailto:majimboanyangu@gmail.com"><i class="fas fa-envelope"></i> majimboanyangu@gmail.com</a></li>
+                <li><a href="tel:+254746954120"><i class="fas fa-phone-alt"></i> +254 7469 541 20</a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</a></li>
+                <li><a href="MAJIMBOCV.pdf" download><i class="fas fa-file-download"></i> Download CV</a></li>
             </ul>
         </div>
     </div>
-</section>
 
+    <div class="footer-bottom">
+        <p>&copy; 2025 Majimbo Anyangu. All Rights Reserved.</p>
+    </div>
+</footer>
 </body>
 
-<script src="script.js"></script>
-</body>
 </html>
