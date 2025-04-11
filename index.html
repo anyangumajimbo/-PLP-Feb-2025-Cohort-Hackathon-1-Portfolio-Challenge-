@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!-- Added to solve horizontal scrolling issue */ -->
     <meta name="description" content="A portfolio website showcasing my skills, projects, and achievements.">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="description" content="A portfolio website showcasing my skills, projects, and achievements.">
+    <meta name="keywords" content="portfolio, web development, AI, robotics, software engineering">
+    <meta name="author" content="ANyangu Mukhutsi Majimbo">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
@@ -19,7 +18,7 @@
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
     <meta name="twitter:url" content="">
-    <title></title>
+    <title>Majimbo Anyangu Portfolio</title>
     <link rel="canonical" href="">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
      <link rel="stylesheet" href="style.css"> 
@@ -28,12 +27,13 @@
 <!-- This is where the body starts -->
 <body>
    <!-- Hero Section -->
+   <div class="hero-image" id="hero">
    <div class="hero-image">
-    <div class="hero-content">
-    <div class="hero-text">
+   <div class="hero-content">
+   <div class="hero-text">
         <!-- Hero Text  -->
       <h1>I am <br> Majimbo Anyangu</h1>
-      <p>And I'm a Tech-Savvy</p>
+      <p>Innovative solutions for lasting impact.</p>
 
                       
     <!-- Programming Languages Ticker -->
@@ -49,9 +49,7 @@
             <span class="language-item">C</span>
             <span class="language-item">MQTT</span>
             <!-- Duplicate items for seamless looping -->
-            <span class="language-item">HTML</span>
-            <span class="language-item">CSS</span>
-            <span class="language-item">JavaScript</span>
+            
         </div>
     </div>
   </div>
@@ -111,6 +109,7 @@
     <!-- Navigation Section -->
     <nav class="dropdown-nav">
         <ul class="nav-links">
+            <li><a href="#hero" class="nav-home">Home</a></li>  <!-- Added Home link -->
             <li><a href="#about" class="nav-about">About</a></li>
             <li><a href="#education" class="nav-education">Education</a></li>
             <li><a href="#interests" class="nav-interests">Interests</a></li>
@@ -132,11 +131,11 @@
                     <div class="about-image">
                         <img src="Majimbo.png" alt="Majimbo Anyangu" class="profile-image">
                     </div>
-                    <div class="about">
-                        <p>My name is Majimbo Anyangu. I hold a degree in Electrical Engineering from the Technical University of Kenya (TUK) and am currently advancing my expertise as a Software Engineering student at PLP Academy.</p>
-                        <p>My unique combination of hardware knowledge and software development skills positions me at the intersection of emerging technologies. I specialize in AI applications, focusing on dataset optimization and multilingual systems.</p>
-                        <p>Passionate about the AI revolution, I develop scalable, intelligent solutions to real-world problems. My technical background enables me to bridge engineering disciplines effectively.</p>
-                        <p>I am committed to leveraging cutting-edge technology to drive innovation, with a focus on building practical, high-impact AI systems.</p>
+                    <div class="about-text">
+                        <p>I’m Majimbo Anyangu, an engineer with a strong foundation in both hardware and software. I hold a degree in Electrical and Electronics Engineering from the Technical University of Kenya and am currently enhancing my software development skills through PLP Academy. My work sits at the intersection of engineering and AI, with a focus on dataset optimization and multilingual systems.</p>
+                        <p>During my academic journey, I took part in a short exchange program at the National School of Engineers of Tarbes (ENIT), where I studied in French and gained deeper insight into integrated system design. This experience expanded both my technical and intercultural competence.</p>
+                        <p>To support myself throughout my studies, I worked as a freelancer—teaching French and Swahili, and contributing to AI data projects. These roles sharpened my communication skills, deepened my understanding of real-world AI applications, and strengthened my adaptability.</p>
+                        <p>I am passionate about building intelligent, practical solutions that drive impact. Whether working on AI systems, teaching, or engineering prototypes, I approach every project with curiosity, purpose, and a commitment to excellence.</p>
                     </div>
                 </div>
             </div>
@@ -149,39 +148,62 @@
         <section id="education">
             <h2>Education</h2>
             <div class="edu-grid">
-                <!-- Technical University of Kenya -->
+                <!-- PLP Academy -->
                 <div class="edu-item">
                     <div class="edu-text">
-                        <h3>Technical University of Kenya</h3>
-                        <p>Bachelor’s Degree in Electrical and Electronics Engineering (Control and Automation).  
-                        Specialized in AI, automation, and embedded systems.</p>
+                        <h3>Power Learn Project – Software Development Scholarship</h3>
+    <h5>Junior Software Developer Training Program</h5>
+    <p class="date">February 2025 – Date</p>
+    <p>Ongoing 16-week program combining coding, entrepreneurship, and career skills for tech roles and startup success.</p>
+    
+    <h4>Key Areas of Study:</h4>
+    <ul class="skills">
+      <li>Software Engineering Fundamentals: Git, GitHub, CLI, project management</li>
+      <li>Web Development: HTML, CSS, JavaScript, responsive design, DOM manipulation</li>
+      <li>Python Programming: Core concepts, debugging, problem-solving, real-world projects</li>
+      <li>Databases & SQL: Data modeling, SQL syntax, relational database design</li>
+      <li>Startup Building: Product development, startup strategy, and tech entrepreneurship</li>
+    </ul>
                     </div>
                     <div class="edu-image">
-                        <img src="TUK.webp" alt="Technical University of Kenya">
+                        <img src="PLP.jpg" alt="PLP Academy">
                     </div>
                 </div>
-    
                 <!-- École Nationale d'Ingénieurs de Tarbes -->
                 <div class="edu-item">
                     <div class="edu-text">
                         <h3>École Nationale d'Ingénieurs de Tarbes</h3>
-                        <p>Masters in Integrated System Design.  
-                        Focus on robotics, AI, and mechanical systems.</p>
+                        <h5>Exchange Program | Integrated Systems Design (Mechatronics & Robotics)</h5>
+                        <p class="date">September 2024 – January 2025</p>
+
+                        <h4>Key Skills  Developed:</h4>
+                        <ul class="skills">
+                            <li>Design and manufacturing of industrial systems</li>
+                            <li>Instrumentation and simulation</li>
+                            <li>Project management with environmental, economic, and social considerations</li>
+                        </ul>
                     </div>
                     <div class="edu-image">
                         <img src="Enit.webp" alt="École Nationale d'Ingénieurs de Tarbes">
                     </div>
                 </div>
-    
-                <!-- PLP Academy -->
+                <!-- Technical University of Kenya -->
                 <div class="edu-item">
                     <div class="edu-text">
-                        <h3>PLP Academy</h3>
-                        <p>Software Engineering Program.  
-                        Developing scalable software solutions and mastering full-stack development.</p>
+                        <h3>Technical University of Kenya – Nairobi, Kenya</h3>
+    <h5>Bachelor of Technology: Electrical and Electronic Engineering</h5>
+    <p class="date">September 2020 – August 2024</p>
+    <p>Specialized in Automation and Control Engineering</p>
+    <h4>Key Skills Developed:</h4>
+    <ul class="skills">
+      <li>Control systems and automation</li>
+      <li>Microcontroller programming and interfacing</li>
+      <li>Power electronics and renewable energy systems</li>
+      <li>Data analysis and machine learning applications in engineering</li>
+    </ul>
                     </div>
-                    <div class="edu-image">
-                        <img src="PLP.jpg" alt="PLP Academy">
+                    <div class="edu-image1">
+                        <img src="TUK.webp" alt="Technical University of Kenya">
                     </div>
                 </div>
             </div>
@@ -191,7 +213,7 @@
     <div class="container">
   <!-- Interests Section -->
 <section id="interests">  <!-- Fixed ID to match CSS -->
-    <h2>Technical Interests</h2>
+    <h2>Interests</h2>
     <div class="interests-grid">
         <!-- AI & Machine Learning -->
         <div class="interest-item" id="interest1">
@@ -253,9 +275,15 @@
                 <div class="project-text">
                     <h3>3D Image Carousel Animation</h3>
                     <p>The 3D Image Carousel Animation is a visually engaging project that showcases a rotating 3D image gallery using only HTML and CSS. It utilizes <strong>CSS transformations, perspective, and animations</strong> to create a dynamic effect, enhanced by reflections. The project highlights pure CSS capabilities for creating interactive, JavaScript-free web components.</p>
+               
+
+                    
                 </div>
                 <div class="project-image">
                     <img src="3D.png" alt="3D Image Carousel Animation">
+                    <a href="https://example.com/3d-carousel" class="project-button" target="_blank">Live Demo</a>
+                    <a href="https://github.com/yourusername/3d-carousel" class="project-button" target="_blank">View Code</a>
+                
                 </div>
             </div>
 
@@ -267,6 +295,9 @@
                 </div>
                 <div class="project-image">
                     <img src="HomeAutomation.jpg" alt="Home Automation System">
+
+                    <a href="https://example.com/home-automation" class="project-button" target="_blank">Demo Video</a>
+                    <a href="https://github.com/yourusername/home-automation" class="project-button" target="_blank">Documentation</a>
                 </div>
             </div>
 
@@ -275,9 +306,12 @@
                 <div class="project-text">
                     <h3>Soft-Active Robotic Hand</h3>
                     <p>The Soft-Active Robotic Hand utilizes <strong>Nitinol shape-memory alloy (SMA) actuators</strong> for flexible and responsive motion. The system is <strong>microcontroller-driven</strong>, with <strong>Arduino (C++) programming</strong> controlling actuation. Sensors provide <strong>real-time feedback</strong>, enabling adaptive grasping. The <strong>Finite Element Method (FEM)</strong> is used for structural analysis, ensuring optimized force distribution. The design integrates <strong>embedded control algorithms</strong> for smooth, precise movements.</p>
+
                 </div>
                 <div class="project-image">
                     <img src="ROBOTCSI.jpg" alt="Soft-Active Robotic Hand">
+                    <a href="https://example.com/home-automation" class="project-button" target="_blank">Demo Video</a>
+                    <a href="https://github.com/yourusername/home-automation" class="project-button" target="_blank">Documentation</a>
                 </div>
             </div>
         </div>
@@ -341,10 +375,10 @@
         <div class="footer-column">
             <h3>Quick Links</h3>
             <ul class="footer-links">
+                <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
                 <li><a href="#about"><i class="fas fa-chevron-right"></i> About Me</a></li>
                 <li><a href="#education"><i class="fas fa-chevron-right"></i> Education</a></li>
                 <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a></li>
-                <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
                 <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
             </ul>
         </div>

@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box; /* Prevent padding from affecting width */
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body, html {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     width: 100%; /* Ensure the body takes full width */
@@ -49,7 +54,7 @@ body, html {
         .languages-container h2 {
             color: #e74c3c;
             font-size: 2rem;
-            margin-top: 100px;
+            margin-top: 80px;
             margin-bottom: 15px;
             text-shadow: 0 0 5px rgba(0,0,0,0.6);
         }
@@ -63,7 +68,7 @@ body, html {
         .languages-ticker {
             display: inline-block;
             white-space: nowrap;
-            animation: scrollLanguagesMobile 12s linear infinite;
+            animation: scrollLanguagesMobile 8s linear infinite;
             padding: 10px 0;
             color: white; /* Ensure text is white for visibility */
             overflow: hidden; /* Hide overflow for the ticker */
@@ -71,8 +76,7 @@ body, html {
         
         .language-item {
             display: inline-block;
-            background: rgba(0, 123, 255, 0.6)
-            ;
+            background: rgba(0, 123, 255, 0.6); /* Semi-transparent background */
             padding: 6px 12px;
             margin: 0 20px;
             border-radius: 15px;
@@ -84,10 +88,10 @@ body, html {
         
         @keyframes scrollLanguagesMobile {
             0% {
-                transform: translateX(100%);
+                transform: translateX(20%);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-20%);
             }
         }
 
@@ -103,7 +107,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 40px;
     background-color: rgba(0, 123, 240, 0.8); /* Semi-transparent background */
     z-index: 1000;
     transition: all 0.3s ease;
@@ -218,7 +222,11 @@ body, html {
 }
 
 /* Hamburger Menu */
-/* Hamburger Menu */
+/* Show Dropdown When Checkbox is Checked */
+#hamburger-toggle:checked ~ .dropdown-nav {
+    left: 0; /* Slide in the menu */
+}
+
 .hamburger-checkbox {
     display: none; /* Hide the checkbox */
 }
@@ -229,7 +237,7 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 25px;
+    height: 20px;
     z-index: 1001;
 }
 
@@ -249,7 +257,7 @@ body, html {
     left: -100%; /* Initially hidden off-screen */
     width: auto; /* Width of the dropdown menu */
     height: auto; /* Full height */
-    background-color: rgba(0, 0, 0, 0.9); /* Black background */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background */
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -283,30 +291,8 @@ body, html {
     color: lightblue;
 }
 
-/* Show Dropdown When Checkbox is Checked */
-#hamburger-toggle:checked ~ .dropdown-nav {
-    left: 0; /* Slide in the menu */
-}
 
-.hamburger {
-    display: none; /* Hidden by default */
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    z-index: 1001;
-}
-
-.hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
+/* Main Container */
 .container {
     display: flex;
     flex-direction: column;
@@ -328,16 +314,17 @@ body, html {
     background-color: #3498db; /* Background color for this row */
 }
 
-/* Education Section */
+/* About Section */
 #about {
     padding: 4px 2px;
-    background-color: #f9f9f9;
+    background-color: transparent; /* Use transparent to show the background image */
     text-align: center;
 }
 
 #about h2 {
     font-size: 32px;
-    margin: 30px;
+    margin-top: 80px;
+    margin-bottom: 20px;
     color: #333;
 }
 
@@ -348,22 +335,23 @@ body, html {
     gap: 5px;
 }
 
-/* Each education row */
+/* Each about row */
 .about-item, .edu-item { /* Reuse the same class for consistency and combining repetitive styles to reduce redundancy  */
     display: grid;
     grid-template-columns: 1fr 1fr; /* Text on the left, Image on the right */
     align-items: center;
-    background-color: #ffffff;
+    background-color: transparent; /* Make sure the background is transparent to show the background image */
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: orangered 5px solid; /* Border color for the about section items */
+    
 }
 
 /* Text section */
 .about-text {
-    text-align: left;
-    padding: 20px;
-    background-color: #f1f1f1;
+        text-align: left;
+        padding: 5px;
 }
 
 .about-text h3 {
@@ -372,13 +360,19 @@ body, html {
 }
 
 .about-text p {
+    max-width: 80%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
+    justify-content: center;
     font-size: 16px;
     line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
 }
 
 /* Image section */
 .about-image img {
-    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    max-width: 50%; /* Ensure the image does not exceed the width of its container */
     height: auto;
     border-radius: 10px;
     object-fit: cover; 
@@ -387,41 +381,82 @@ body, html {
 /* Education Section */
 #education {
     padding: 4px 2px;
-    background-color: #f9f9f9;
+    background-color: transparent; /* Use transparent to show the background image */
     text-align: center;
 }
 
 #education h2 {
     font-size: 32px;
-    margin: 30px;
+    margin-top: 80px;
+    margin-bottom: 30px;
     color: #333;
 }
 
 /* Grid Layout */
 .edu-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack in one column on small screens */
     gap: 5px;
 }
 
+/* Each edu-item should be flex for image + text layout */
+.edu-item {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
 /* Text section */
 .edu-text {
     text-align: left;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: transparent;
 }
 
 .edu-text h3 {
     font-size: 24px;
     color: #e74c3c;
+    margin-bottom: 8px; /* Space below the heading */
+}
+
+.edu-text h4,
+.edu-text h5 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 8px; /* Slightly smaller space for subheadings */
 }
 
 .edu-text p {
+    max-width: 90%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
+    color: #333;
+    justify-content: center;
     font-size: 16px;
     line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
 }
 
+#education .date {
+    color: #333;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+  .edu-text ul {
+    padding-left: 0px;
+    margin-bottom: 9px;
+  }
+  
+  .edu-text li {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
 /* Image section */
 .edu-image img {
     max-width: 100%; /* Ensure the image does not exceed the width of its container */
@@ -430,15 +465,22 @@ body, html {
     object-fit: cover; 
 }
 
+.edu-image1 img {
+    max-width: 50%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+    object-fit: cover; /* Cover the container without stretching the image */
+}
 /* Interest Section Styling */
 #interests {
     padding: 4px 2px;
-    background-color: #f9f9f9;
+    background-color: transparent; /* Use transparent to show the background image */
     text-align: center;
 }
 
 #interests h2 {
     font-size: 32px;
+    margin-top: 80px;
     margin-bottom: 30px;
     color: #333;
 }
@@ -452,7 +494,7 @@ body, html {
 
 /* Each interest item */
 .interest-item {
-    background-color: #ffffff;
+    background-color: transparent; /* Use transparent to show the background image */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -486,9 +528,15 @@ body, html {
 
 /* Interest Description */
 .interest-item p {
-    font-size: 16px;
+    max-width: 100%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
     color: white;
-    line-height: 1.6;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
 }
     .interest-item h3, 
     .interest-item p {   background: rgba(0, 0, 0, 0.5); /* Dark translucent layer */
@@ -545,12 +593,13 @@ body, html {
 /* Styling for the project section */
 #projects {
     padding: 10px 5px;
-    background-color: #f9f9f9;
+    background-color: transparent; /* Use transparent to show the background image */
     text-align: center;
 }
 
 #projects h2 {
     font-size: 32px;
+    margin-top: 80px;
     margin-bottom: 30px;
     color: #333;
 }
@@ -568,7 +617,7 @@ body, html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    background-color: #ffffff;
+    background-color: transparent; /* Use transparent to show the background image */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -585,9 +634,15 @@ body, html {
 }
 
 .project-text p {
-    font-size: 16px;
-    line-height: 1.6;
+    max-width: 80%; /* Limit the width of the paragraph for better readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+    text-align: justify;
     color: #333;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-left: auto; /* Center align the text in the grid item */
+    margin-right: auto; /* Center align the text in the grid item */
 }
 
 .project-image img {
@@ -599,35 +654,48 @@ body, html {
     margin: 0 auto;
 }
 
+/* Project buttons styling */
+.project-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
 
-.column {
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
     color: white;
-    padding: 20px;
-    text-align: center;
+    text-decoration: none;
     border-radius: 5px;
-    margin: -1px;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-.column image {
-    width: 100%;
-    height: auto;
-    display: block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid #e74c3c;
 }
 
+.project-button:hover {
+    background-color: transparent;
+    color: #e74c3c;
+}
+
+/* Contact Section */
 #contact {
-    background-color: #f4f4f4;
-    padding: 50px 20px;
+    background-color: transparent; /* Use transparent to show the background image */
+    background-size: cover;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .contact-container {
     max-width: 800px;
     margin: 0 auto;
+    background-color: transparent;
 }
 
 .contact-container h2 {
     font-size: 2.5em;
     color: #333;
+    margin-top: 52px;
     margin-bottom: 20px;
 }
 
@@ -638,7 +706,7 @@ body, html {
 }
 
 .contact-form {
-    background-color: #fff;
+    background-color: transparent; /* Use transparent to show the background image */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -898,7 +966,7 @@ html, body {
     }
     /* Responsiveness for the CV section */
     .header-cv-btn {
-        margin-right: 00px;
+        padding: 1px 20px;
         padding: 8px 15px;
         font-size: 14px;
     }
@@ -925,9 +993,9 @@ html, body {
         text-align: center;
     }
 
-    .edu-text {
+    /* .edu-text {
         text-align: center;
-    }
+    } */
 /* Responsive design for interests sction  */
     /* Stack the interests grid in one column */
     .interests-grid {
