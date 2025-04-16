@@ -18,13 +18,13 @@ body, html {
     touch-action: pan-y; /*  Added to solve horizontal scrolling issueOnly allows vertical touch scrolling */
     
    background: 
-    url('Mai nBg.jpg') repeat,
     linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 10%);
 }
   
   
   .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Computer.jpg");
+    background-color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 10%); /* Fallback gradient */
+    background-image: url("./assets/Hero.webp"); /* Image background */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,8 +114,9 @@ body, html {
 }
 
 
-.logo img {
-    height: 50px;
+.logo p {
+    font-size: 20px;
+    color: white;
 }
 
  /* Multicolor Blinking CV Button */
@@ -208,6 +209,8 @@ body, html {
 .social-media {
     display: flex;
     gap: 15px;
+    flex-direction: row;
+    order: 2; /* Ensure social media icons come after the navigation links */
 }
 
 .social-icon {
@@ -270,8 +273,9 @@ body, html {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 15px;
+    order: 1; /* Ensure links come before social media icons */
 }
 
 .nav-links li {
@@ -437,14 +441,16 @@ body, html {
     justify-content: center;
     font-size: 16px;
     line-height: 1.5;
-    margin-left: auto; /* Center align the text in the grid item */
-    margin-right: auto; /* Center align the text in the grid item */
+   /* margin-left: auto;  Center align the text in the grid item 
+    margin-right: auto;  Center align the text in the grid item */
+    padding-left: 0px;
 }
 
 #education .date {
     color: #333;
     font-style: italic;
     font-size: 0.95rem;
+    padding-left: 0px;
   }
 
   .edu-text ul {
@@ -465,12 +471,7 @@ body, html {
     object-fit: cover; 
 }
 
-.edu-image1 img {
-    max-width: 50%; /* Ensure the image does not exceed the width of its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for the image */
-    object-fit: cover; /* Cover the container without stretching the image */
-}
+
 /* Interest Section Styling */
 #interests {
     padding: 4px 2px;
@@ -548,28 +549,28 @@ body, html {
 
 /* Interests Background images */
 #interest1 {
-    background-image: url('AI2.jpg');
+    background-image: url('assets/AI2.webp');
     background-size: cover;
     background-position: center;
    
   }
   
   #interest2 {
-    background-image: url('Robotics.jpg');
+    background-image: url('assets/ROBOTCSI.jpg');
     background-size: cover;
     background-position: center;
     
   }
   
   #interest3 {
-    background-image: url('PLP.png');
+    background-image: url('assets/PLP.png');
     background-size: cover;
     background-position: center;
    
   }
 
   #interest4 {
-    background-image: url('embedded.jpg');
+    background-image: url('/assets/embedded.jpg');
     background-size: cover;
     background-position: center;
     
@@ -577,14 +578,14 @@ body, html {
   }
   
   #interest5 {
-    background-image: url('Data1.jpg');
+    background-image: url('/assets/Data1.webp');
     background-size: cover;
     background-position: center;
     
   }
   
   #interest6 {
-    background-image: url('cybersecurity.jpg');
+    background-image: url('/assets/cybersecurity.jpg');
     background-size: cover;
     background-position: center;
    
@@ -993,9 +994,7 @@ html, body {
         text-align: center;
     }
 
-    /* .edu-text {
-        text-align: center;
-    } */
+    
 /* Responsive design for interests sction  */
     /* Stack the interests grid in one column */
     .interests-grid {
@@ -1097,3 +1096,42 @@ html, body {
 }
 
 
+/* Media Query for Tablets and iPads */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .interests-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .interest-item {
+        text-align: center; /* Ensure items are centered */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+        /* Footer Container */
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns for Quick Links and Technical Skills */
+            gap: 20px; /* Add spacing between columns */
+            text-align: left; /* Align text to the left */
+        }
+    
+        /* Contact Info Centered */
+        .footer-column:nth-child(3) {
+            grid-column: span 2; /* Make Contact Info span across both columns */
+            text-align: center; /* Center-align the content */
+        }
+    
+        /* Social Media Icons Centered */
+        .social-links {
+            justify-content: center; /* Center-align social media icons */
+            margin-bottom: 20px; /* Add spacing below social links */
+        }
+    
+        /* Footer Bottom Text */
+        .footer-bottom {
+            text-align: center; /* Center-align the footer bottom text */
+            margin-top: 20px;
+        }
+    }
