@@ -552,28 +552,28 @@ body, html {
 
 /* Interests Background images */
 #interest1 {
-    background-image: url('assets/AI2.webp');
+    background-image: url('./assets/AI2.webp');
     background-size: cover;
     background-position: center;
    
   }
   
   #interest2 {
-    background-image: url('assets/ROBOTCSI.jpg');
+    background-image: url('./assets/ROBOTCSI.jpg');
     background-size: cover;
     background-position: center;
     
   }
   
   #interest3 {
-    background-image: url('assets/PLP.png');
+    background-image: url('./assets/PLP.png');
     background-size: cover;
     background-position: center;
    
   }
 
   #interest4 {
-    background-image: url('/assets/embedded.jpg');
+    background-image: url('./assets/embedded.jpg');
     background-size: cover;
     background-position: center;
     
@@ -581,14 +581,14 @@ body, html {
   }
   
   #interest5 {
-    background-image: url('/assets/Data1.webp');
+    background-image: url('./assets/Data1.webp');
     background-size: cover;
     background-position: center;
     
   }
   
   #interest6 {
-    background-image: url('/assets/cybersecurity.jpg');
+    background-image: url('./assets/cybersecurity.jpg');
     background-size: cover;
     background-position: center;
    
