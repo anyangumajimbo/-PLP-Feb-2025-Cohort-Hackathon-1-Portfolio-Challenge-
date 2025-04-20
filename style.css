@@ -23,13 +23,16 @@ body, html {
   
   
   .hero-image {
-    background-color: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 10%); /* Fallback gradient */
-    background-image: url("./assets/Hero.webp"); /* Image background */
+    background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Fallback gradient */
+
+    /* Use "linear-gradient" to add a darken background effect to the image (./assets/Hero.webp). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("./assets/Hero.webp"); /* Image background */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    opacity: 1.0; /* Adjust opacity for the background image */
   }
   
   .hero-text {
